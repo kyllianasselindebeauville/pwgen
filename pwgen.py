@@ -5,7 +5,8 @@ import string
 
 def generate_password(length: int = 16,
                       lowercase: bool = False,
-                      uppercase: bool = False) -> str:
+                      uppercase: bool = False,
+                      digits: bool = False) -> str:
     """Generates a password.
 
     Generates a secure random password using the secrets module.
@@ -14,12 +15,14 @@ def generate_password(length: int = 16,
         length: Length of the password to generate.
         lowercase: Whether or not to include lowercase letters in the password.
         uppercase: Whether or not to include uppercase letters in the password.
+        digits: Whether or not to include digits in the password.
 
     Returns:
         The generated password as a str.
     """
     characters = ((string.ascii_lowercase if lowercase else '') +
-                  (string.ascii_uppercase if uppercase else '') or
+                  (string.ascii_uppercase if uppercase else '') +
+                  (string.digits if digits else '') or
                   (string.ascii_letters + string.digits + string.punctuation))
     password = ''.join(secrets.choice(characters) for _ in range(length))
     return password
@@ -33,10 +36,12 @@ def main():
                         help='include lowercase letters in the password')
     parser.add_argument('-u', '--uppercase', action='store_true',
                         help='include uppercase letters in the password')
+    parser.add_argument('-d', '--digits', action='store_true',
+                        help='include digits in the password')
 
     args = parser.parse_args()
     password = generate_password(length=args.length, lowercase=args.lowercase,
-                                 uppercase=args.uppercase)
+                                 uppercase=args.uppercase, digits=args.digits)
     print(password)
 
 
