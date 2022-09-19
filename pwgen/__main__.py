@@ -2,7 +2,7 @@ import argparse
 import secrets
 import string
 
-from version import __version__
+from pwgen.version import __version__
 
 
 def generate_password(length: int = 16,
