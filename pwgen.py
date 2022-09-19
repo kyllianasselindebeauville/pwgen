@@ -2,6 +2,8 @@ import argparse
 import secrets
 import string
 
+from version import __version__
+
 
 def generate_password(length: int = 16,
                       lowercase: bool = False,
@@ -46,6 +48,8 @@ def main():
                         help='include symbols in the password')
     parser.add_argument('-u', '--uppercase', action='store_true',
                         help='include uppercase letters in the password')
+    parser.add_argument('-V', '--version', action='version',
+                        version=f'%(prog)s {__version__}')
 
     args = parser.parse_args()
     password = generate_password(length=args.length, lowercase=args.lowercase,
