@@ -4,7 +4,8 @@ from pwgen.version import __version__
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Generate a password.',
+    parser = argparse.ArgumentParser(prog='pwgen',
+                                     description='Generate a password.',
                                      add_help=False)
 
     parser.add_argument('length', nargs='?', default=16, type=int,
