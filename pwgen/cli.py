@@ -4,6 +4,13 @@ from pwgen.version import __version__
 
 
 def parse_args():
+    """Parses arguments from the command-line.
+
+    Creates a parser, adds arguments to the parser, parses those arguments.
+
+    Returns:
+        An argparse.Namespace object containing the arguments as attributes.
+    """
     parser = argparse.ArgumentParser(prog='pwgen',
                                      usage='%(prog)s [options] [length]',
                                      description='Generate a password.',
