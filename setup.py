@@ -10,5 +10,10 @@ setup(
     author_email='kyllianasselindebeauville@gmail.com',
     url='https://github.com/kyllianasselindebeauville/pwgen',
     packages=['pwgen'],
-    license='MIT'
+    license='MIT',
+    entry_points={
+        'console_scripts': [
+            'pwgen = pwgen.__main__:main',
+        ],
+    },
 )
