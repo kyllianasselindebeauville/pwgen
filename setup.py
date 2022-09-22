@@ -16,4 +16,5 @@ setup(
             'pwgen = pwgen.__main__:main',
         ],
     },
+    python_requires='>=3.7',
 )
