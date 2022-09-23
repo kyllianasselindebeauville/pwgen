@@ -28,3 +28,6 @@ def generate_password(length: int = 16,
                   (string.ascii_letters + string.digits + string.punctuation))
     password = ''.join(secrets.choice(characters) for _ in range(length))
     return password
+
+
+generate = generate_password
