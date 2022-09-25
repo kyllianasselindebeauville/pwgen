@@ -27,7 +27,7 @@ cd pwgen
 - Use the package manager `pip` to install `pwgen`.
 
 ```shell
-pip3 install .
+python3 -m pip install .
 ```
 
 ## Usage
