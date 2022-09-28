@@ -18,6 +18,8 @@ def parse_args():
 
     parser.add_argument('length', nargs='?', default=16, type=int,
                         help='length of the password')
+    parser.add_argument('-c', '--clipboard', action='store_true',
+                        help='copy the password to the clipboard')
     parser.add_argument('-d', '--digits', action='store_true',
                         help='include digits')
     parser.add_argument('-h', '--help', action='help',

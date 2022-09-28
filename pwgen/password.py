@@ -6,7 +6,8 @@ def generate_password(length: int = 16,
                       lowercase: bool = False,
                       uppercase: bool = False,
                       digits: bool = False,
-                      symbols: bool = False) -> str:
+                      symbols: bool = False,
+                      **kwargs: bool) -> str:
     """Generates a password.
 
     Generates a secure random password using the secrets module.
@@ -26,6 +27,7 @@ def generate_password(length: int = 16,
                   (string.digits if digits else '') +
                   (string.punctuation if symbols else '') or
                   (string.ascii_letters + string.digits + string.punctuation))
+
     password = ''.join(secrets.choice(characters) for _ in range(length))
     return password
 

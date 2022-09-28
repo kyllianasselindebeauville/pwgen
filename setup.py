@@ -11,6 +11,9 @@ setup(
     url='https://github.com/kyllianasselindebeauville/pwgen',
     packages=['pwgen'],
     license='MIT',
+    install_requires=[
+        'pyperclip>=1.8.2',
+    ],
     entry_points={
         'console_scripts': [
             'pwgen = pwgen.__main__:main',

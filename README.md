@@ -41,6 +41,7 @@ positional arguments:
   length           length of the password
 
 options:
+  -c, --clipboard  copy the password to the clipboard
   -d, --digits     include digits
   -h, --help       show this help message and exit
   -l, --lowercase  include lowercase letters
