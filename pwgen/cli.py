@@ -26,6 +26,8 @@ def parse_args():
                         help='show this help message and exit')
     parser.add_argument('-l', '--lowercase', action='store_true',
                         help='include lowercase letters')
+    parser.add_argument('-p', '--print', action='store_true',
+                        help='print the password to the terminal')
     parser.add_argument('-s', '--symbols', action='store_true',
                         help='include symbols')
     parser.add_argument('-u', '--uppercase', action='store_true',

@@ -10,7 +10,8 @@ def main():
 
     if args.clipboard:
         pyperclip.copy(password)
-    else:
+
+    if args.print or not args.clipboard:
         print(password)
 
 

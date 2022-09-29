@@ -45,6 +45,7 @@ options:
   -d, --digits     include digits
   -h, --help       show this help message and exit
   -l, --lowercase  include lowercase letters
+  -p, --print      print the password to the terminal
   -s, --symbols    include symbols
   -u, --uppercase  include uppercase letters
   -V, --version    show program's version number and exit
