@@ -1,5 +1,6 @@
 import secrets
 import string
+from typing import Any
 
 
 def generate_password(length: int = 16,
@@ -7,7 +8,7 @@ def generate_password(length: int = 16,
                       uppercase: bool = False,
                       digits: bool = False,
                       symbols: bool = False,
-                      **kwargs: bool) -> str:
+                      **kwargs: Any) -> str:
     """Generates a password.
 
     Generates a secure random password using the secrets module.
