@@ -5,7 +5,7 @@ exec(open('pwgen/version.py').read())
 setup(
     name='pwgen',
     version=__version__,
-    description='A secure password generator',
+    description='Generate secure passwords',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='Kyllian Asselin de Beauville',
